@@ -50,7 +50,6 @@ const Register = () => {
         password
       };
       
-      // Replace with your actual API endpoint
       const response = await axios.post('http://localhost:5001/api/auth/register', registerData);
 
       // If registration is successful, you might want to log in the user automatically

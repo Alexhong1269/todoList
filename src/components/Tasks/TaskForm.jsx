@@ -8,7 +8,7 @@ const TaskForm = ({ onTaskCreated }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const token = localStorage.getItem('token'); // Grab token from storage
+    const token = localStorage.getItem('token');
 
     try {
       const response = await axios.post(
@@ -21,7 +21,7 @@ const TaskForm = ({ onTaskCreated }) => {
         }
       );
 
-      onTaskCreated(response.data); // send new task up to parent
+      onTaskCreated(response.data);
       setTitle('');
       setError('');
     } catch (err) {

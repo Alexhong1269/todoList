@@ -16,7 +16,7 @@ const Login = () => {
 
   const handleChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    setError(''); // Clear error when user types
+    setError('');
   };
 
   const handleSubmit = async e => {
@@ -30,7 +30,6 @@ const Login = () => {
     
     try {
       setLoading(true);
-      // Replace with your actual API endpoint
       const response = await axios.post('http://localhost:5001/api/auth/login', formData);
 
       // Store the token in localStorage
