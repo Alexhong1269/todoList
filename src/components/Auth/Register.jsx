@@ -51,6 +51,7 @@ const Register = () => {
       };
       
       const response = await axios.post('http://localhost:5001/api/auth/register', registerData);
+      console.log('REGISTER RESPONSE:', response);
 
       // If registration is successful, you might want to log in the user automatically
       localStorage.setItem('token', response.data.token);

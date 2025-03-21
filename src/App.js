@@ -6,7 +6,7 @@ import TaskList from './components/Tasks/TaskList';
 
 import './App.css';
 
-// Simple auth check function - will expand this later
+// Simple auth check function
 const isAuthenticated = () => {
   return localStorage.getItem('token') !== null;
 };
