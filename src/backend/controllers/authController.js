@@ -33,7 +33,7 @@ exports.registerUser = async (req, res) => {
 // Login User
 exports.loginUser = async (req, res) => {
   const { email, password } = req.body;
-  console.log('Incoming login:', email, password); // 👈 Debugging
+  console.log('Incoming login:', email, password);
 
   try {
     const user = await User.findOne({ email });
@@ -57,7 +57,7 @@ exports.loginUser = async (req, res) => {
       token,
     });
   } catch (err) {
-    console.error('LOGIN ERROR:', err.message); // 👈 See the real error
+    console.error('LOGIN ERROR:', err.message);
     res.status(500).json({ message: 'Server error' });
   }
 };
